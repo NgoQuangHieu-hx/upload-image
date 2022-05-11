@@ -8,8 +8,6 @@
 </head>
 <body>
     test
-    {{-- <img src="{{ URL::asset('public\uploads\VzAkdY5dBHGJxM7ksfgbCQlVKHOInx1zkf77QSnk.jpg') }}"/> --}}
-
-    <img src="{{ public_path('storage/image_test/2HZtKDAJH14GEjlZty5sPqtLWzq6Rh7bnQMgwUO7.jpg') }}" alt="sia roi">
+    <img src="/storage/image_test/vtiK6jxDHe3sluFYalGtCMS0hLgGs9HmjsymKVzC.jpg" alt="sia roi">
 </body>
 </html>
