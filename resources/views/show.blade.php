@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    test
-    <img src="/storage/image_test/vtiK6jxDHe3sluFYalGtCMS0hLgGs9HmjsymKVzC.jpg" alt="sia roi">
+    <?php foreach($list as $image): ?>
+        <img src="{{ $image }}" alt="">
+    <?php endforeach; ?>
 </body>
 </html>
