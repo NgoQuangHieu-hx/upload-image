@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php foreach($list as $image): ?>
-        <img src="{{ $image }}" alt="">
+        <img src="{{ asset($image) }}" alt="">
     <?php endforeach; ?>
 </body>
 </html>
