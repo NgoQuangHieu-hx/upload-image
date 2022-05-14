@@ -9,13 +9,11 @@ class importController extends Controller
 {
     public function storange(Request $request){
         $image = $request->file('image');
-        // $path = Storage::disk('public')->put('image_test', $image);
+        $path = Storage::disk('public')->put('image_test', $image);
         $path = Storage::disk('public')->files('image_test');
-        dd($path);
         $list = [];
         foreach($path as $file){
             $list[] = Storage::url($file);
-            dd($list);
         }
         return view('show')->with('list',$list);
     }
