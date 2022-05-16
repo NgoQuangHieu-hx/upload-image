@@ -19,6 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::any('import-image', 'importController@storange');
+Route::post('import-image', 'importController@storange');
 
 Route::any('show-image', 'importController@show');
