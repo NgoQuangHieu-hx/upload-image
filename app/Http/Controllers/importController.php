@@ -11,6 +11,7 @@ class importController extends Controller
         $image = $request->file('image');
         $path = Storage::disk('public')->put('image_test', $image);
         $path = Storage::disk('public')->files('image_test');
+        dd($path);
         $list = [];
         foreach($path as $file){
             $list[] = Storage::url($file);
