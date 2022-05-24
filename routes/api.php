@@ -22,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('import-image', 'importController@storange');
 
 Route::get('show-image', 'importController@show');
+
+Route::any('/','ManagementStudentController@index');
