@@ -24,3 +24,4 @@ Route::post('import-image', 'importController@storange');
 Route::get('show-image', 'importController@show');
 
 Route::any('/','ManagementStudentController@index');
+

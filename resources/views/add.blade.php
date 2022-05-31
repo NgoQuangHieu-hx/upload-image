@@ -37,7 +37,8 @@
                 </div>
             </div>
             <div class="col">
-                <form action="">
+                <form action="/create" method="post" onsubmit="return validateForm()" name="myForm">
+                @csrf   
                     <table>
                         <th>
                             <H3>Personal Info</H3>
@@ -49,7 +50,7 @@
                                 </b>
                             </td>
                             <td>
-                                <input class="form-control" type="text" placeholder="First name">
+                                <input class="form-control" type="text" placeholder="First name" name="first_name">
                             </td>
                         </tr>
                         <tr>
@@ -59,7 +60,7 @@
                                 </b>
                             </td>
                             <td>
-                                <input class="form-control" type="text" placeholder="Last name">
+                                <input class="form-control" type="text" placeholder="Last name" name="last_name">
                             </td>
                         </tr>
                         <tr>
@@ -69,7 +70,7 @@
                                 </b>
                             </td>
                             <td>
-                                <input class="form-control" type="text" placeholder="Staff ID">
+                                <input class="form-control" type="text" placeholder="Staff ID" name="staff_id">
                             </td>
                         </tr>
                         <tr>
@@ -79,7 +80,7 @@
                                 </b>
                             </td>
                             <td>
-                                <input class="form-control" type="text" placeholder="Email">
+                                <input class="form-control" type="text" placeholder="Email" name="email">
                             </td>
                         </tr>
                         <tr>
@@ -89,7 +90,7 @@
                                 </b>
                             </td>
                             <td>
-                                <input class="form-control" type="text" placeholder="Department">
+                                <input class="form-control" type="text" placeholder="Department" name="department">
                             </td>
                         </tr>
                         <tr>
@@ -100,7 +101,7 @@
                             </td>
                             <td>
                                 {{-- <input class="form-control" type="text" placeholder="Position"> --}}
-                                <select name="position" id="position" class="form-control">
+                                <select name="position" id="position" class="form-control" name="position">
                                     <option value="Manager">Manager</option>
                                     <option value="Manager_2">Manager_2</option>
                                     <option value="Manager_3">Manager_3</option>
@@ -120,6 +121,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+    function validateForm() {
+    var x = document.forms["myForm"]["first_name"].value;
+    if (x == "" || x == null) {
+        alert("First Name must be filled out");
+        return false;
+        }
+    }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

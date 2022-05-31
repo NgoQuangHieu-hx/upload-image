@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('add', function () {
     return view('add');
+});
+
+Route::get('edit/{id}', function () {
+    return view('edit');
 });
 
 Route::post('import-image', 'importController@storange');
 
 Route::post('show-image', 'importController@show');
+
+Route::post('/create', 'StudentController@index'); 
